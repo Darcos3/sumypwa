@@ -45,20 +45,20 @@
                     <div class="row">
                         <div class="col text-center">
                             <img src="{{ asset('frontend/assets/images/venta-empresa.jpg') }}"
-                                class="img-fluid rounded-circle">
+                                class="img-fluid rounded-circle"><br>
                             Ver ingresos diarios
                         </div>
                         <div class="col text-center">
                             <img src="{{ asset('frontend/assets/images/ve-ico1.png') }}" class="img-fluid rounded-circle">
-                            Ver tus entregas
+                            <br>Ver tus entregas
                         </div>
                         <div class="col text-center">
                             <img src="{{ asset('frontend/assets/images/ve-ico3.png') }}" class="img-fluid rounded-circle">
-                            Gestionar tu ruta
+                            <br>Gestionar tu ruta
                         </div>
                         <div class="col text-center">
                             <img src="{{ asset('frontend/assets/images/ve-ico2.png') }}" class="img-fluid rounded-circle">
-                            Te brindaremos aseoria
+                            <br>Te brindaremos aseoria
                         </div>
                         <img src="{{ asset('frontend/assets/images/sumy-img1.png') }}" class="img-fluid">
                     </div>
