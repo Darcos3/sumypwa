@@ -13,8 +13,6 @@ class PwaHomeController extends Controller
     * @return \Illuminate\Contracts\Support\Renderable
     */
     public function index(){
-        $sliders = \App\Models\Slider::where('activo',1)->get();
-
-        return view('pwa.welcome', compact('sliders'));
+        return view('pwa.welcome');
      }
 }
