@@ -40,7 +40,7 @@
         <!-- End Go to Top -->
         <script src="{{ asset('js/jquery-3.7.0.min.js') }}"></script>
         <script src="{{ asset('pwa/js/scripts.js') }}"></script>
-        <script src="{{ asset('js/serviceworker.js') }}"></script>
+        <script src="{{ asset('serviceworker.js') }}"></script>
         @yield('scripts')
     </body>
 </html>
