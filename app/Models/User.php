@@ -19,19 +19,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'apellidos',
-        'celular',
         'email',
         'password',
-        'cedula',
-        'birthday',
-        'id_ciudad',
-        'direccion',
-        'identificador',
-        'rol_id',
-        'forma_pago',
-        'estado',
-        'rol_user'
     ];
 
     /**
@@ -52,49 +41,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    // public function productos()
-    // {
-    //     return $this->belongsToMany(Producto::class);
-    // }
-
-    public function productos()
-    {
-        return $this->morphedByMany(Producto::class, 'favorito');
-    }
-
-    public function combos()
-    {
-        return $this->morphedByMany(Combo::class, 'favorito');
-    }
-
-    public function carrito()
-    {
-        return $this->hasOne(Carrito::class);
-        // return $this->belongsToMany(Producto::class, 'carrito')->withPivot('cantidad');
-    }
-
-    public function pedidos()
-    {
-        return $this->hasMany(Pedido::class);
-    }
-
-    public function direcciones()
-    {
-        return $this->hasMany(Direccion::class);
-    }
-
-    public function ferretero()
-    {
-        return $this->hasOne(Ferretero::class);
-    }
-
-    public static function carritoTotal()
-    {
-        if (auth()->check()) {
-            return ['cantidad' => auth()->user()->carrito->productos->count() + auth()->user()->carrito->combos->count(), 'total' => auth()->user()->carrito->total];
-        }
-
-        return ['cantidad' => 0, 'total' => 0];
-    }
 }

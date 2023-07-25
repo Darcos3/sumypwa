@@ -15,4 +15,8 @@ class PwaHomeController extends Controller
     public function index(){
         return view('pwa.welcome');
      }
+
+     public function login(){
+        
+     }
 }

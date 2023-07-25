@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'name' => 'Sumy Repartidores',
+    'name' => 'Sumy Transportadores',
     'manifest' => [
-        'name' => env('APP_NAME', 'Sumy Repartidores'),
-        'short_name' => 'SumyRep',
+        'name' => env('APP_NAME', 'Sumy Transportadores'),
+        'short_name' => 'SumyT',
         'start_url' => '/',
         'background_color' => '#f1592a',
         'theme_color' => '#f1592a',
         'display' => 'standalone',
-        'orientation'=> 'landscape',
+        'orientation'=> 'portrait',
         'status_bar'=> '#f1592a',
         'icons' => [
             '72x72' => [

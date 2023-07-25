@@ -24,7 +24,7 @@
 @section('content')
     <!-- Background Video-->
     <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="{{ asset('pwa/assets/mp4/bg.mp4') }}" type="video/mp4" />
+        <source src="{{ asset('mp4/bg.mp4') }}" type="video/mp4" />
     </video>
     <!-- Masthead-->
     <div class="masthead">
@@ -35,32 +35,32 @@
                 </span>
             </div>
             <div class="container-fluid px-4 px-lg-0 text-center">
-                <img src="{{ asset('frontend/assets/images/logo-sumy@2xwhite.png') }}" class="img fluid"
+                <img src="{{ asset('images/logo-sumy@2xwhite.png') }}" class="img fluid"
                     style="width: 200px;">
                 <div id="paso1">
-                    <h3 class="fst-italic lh-1 mb-4 mt-3">¿Eres Repartidor de Sumy?</h3>
+                    <h3 class="fst-italic lh-1 mb-4 mt-3">¿Eres Transportador de Sumy?</h3>
                     <p class="mb-5">Si formas parte de los repartidores de Sumy, ingresa a la plataforma donde
                         encontrarás distintas formas de llevar a cabo tus entregas.
                     </p>
                     <div class="row">
                         <div class="col text-center">
-                            <img src="{{ asset('frontend/assets/images/venta-empresa.jpg') }}"
+                            <img src="{{ asset('images/venta-empresa.jpg') }}"
                                 class="img-fluid rounded-circle"><br>
                             Ver ingresos diarios
                         </div>
                         <div class="col text-center">
-                            <img src="{{ asset('frontend/assets/images/ve-ico1.png') }}" class="img-fluid rounded-circle">
+                            <img src="{{ asset('images/ve-ico1.png') }}" class="img-fluid rounded-circle">
                             <br>Ver tus entregas
                         </div>
                         <div class="col text-center">
-                            <img src="{{ asset('frontend/assets/images/ve-ico3.png') }}" class="img-fluid rounded-circle">
+                            <img src="{{ asset('images/ve-ico3.png') }}" class="img-fluid rounded-circle">
                             <br>Gestionar tu ruta
                         </div>
-                        <div class="col text-center">
+                        {{-- <div class="col text-center">
                             <img src="{{ asset('frontend/assets/images/ve-ico2.png') }}" class="img-fluid rounded-circle">
                             <br>Te brindaremos aseoria
-                        </div>
-                        <img src="{{ asset('frontend/assets/images/sumy-img1.png') }}" class="img-fluid">
+                        </div> --}}
+                        <img src="{{ asset('images/sumy-img1.png') }}" class="img-fluid">
                     </div>
 
                     <div class="col-md-12 mt-3" style="text-align: right">
@@ -71,15 +71,16 @@
                 <div id="paso2" class="text-center mt-5" style="display:none">
                     <h3>Inicio de Sesión</h3>
                     <p>Por favor, ingresa tus datos de acceso al sistema de Sumy</p>
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="row">
                             <div class="form-group">
-                                <input class="form-control" id="email" type="email"
-                                    placeholder="Enter email address..." />
+                                <input class="form-control" id="email" type="email" name="email"
+                                    placeholder="Ingrese su email..." />
                             </div>
                             <div class="form-group mt-3">
-                                <input class="form-control" id="password" type="password"
-                                    placeholder="Enter email password..." />
+                                <input class="form-control" id="password" type="password" name="password"
+                                    placeholder="Ingrese su password..." />
                             </div>
                             <button class="btn btn-primary btn-block mt-3" type="submit">Iniciar
                                 Sesión</button>
