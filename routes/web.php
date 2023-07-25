@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\PwaHomeController::class, 'index'])->name('index');
 Route::get('/offline', function () {    
-    return view('modules/laravelpwa/offline');
+    return view('vendor/laravelpwa/offline');
 });
 
 
