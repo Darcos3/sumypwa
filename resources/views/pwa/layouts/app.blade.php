@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <!-- Title -->
-        <title>@yield('titulo') | SUMY - Domiciliarios</title>
+        <title>@yield('titulo') | SUMY - Transportadores</title>
 
         <!-- Required Meta Tags Always Come First -->
         <meta charset="utf-8">

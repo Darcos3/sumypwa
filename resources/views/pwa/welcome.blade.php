@@ -39,7 +39,7 @@
                     style="width: 200px;">
                 <div id="paso1">
                     <h3 class="fst-italic lh-1 mb-4 mt-3">¿Eres Transportador de Sumy?</h3>
-                    <p class="mb-5">Si formas parte de los repartidores de Sumy, ingresa a la plataforma donde
+                    <p class="mb-5">Si formas parte de los transportadores de Sumy, ingresa a la plataforma donde
                         encontrarás distintas formas de llevar a cabo tus entregas.
                     </p>
                     <div class="row">
