@@ -4,7 +4,7 @@ return [
     'name' => 'Sumy Transportadores',
     'manifest' => [
         'name' => env('APP_NAME', 'Sumy Transportadores'),
-        'short_name' => 'SumyT',
+        'short_name' => 'Sumy Transportadores',
         'start_url' => '/',
         'background_color' => '#f1592a',
         'theme_color' => '#f1592a',
