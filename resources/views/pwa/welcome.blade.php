@@ -1,27 +1,32 @@
-@extends('pwa.layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('titulo', 'Inicio')
+<head>
+    <!-- Title -->
+    <title>@yield('titulo') | SUMY - Transportadores</title>
 
-@section('styles')
-    <style>
-        .btn:hover {
-            cursor: pointer !important;
-            opacity: 0.8;
-            box-shadow: 1px 2px 3px #222;
-        }
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .rounded-circle {
-            width: 80px;
-            height: 80px;
-        }
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('frontend/assets/images/favicon.png') }}">
 
-        #btnInicio {
-            cursor: pointer;
-        }
-    </style>
-@endsection
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
+        rel="stylesheet">
 
-@section('content')
+    {{-- PWA --}}
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="{{ asset('pwa/css/styles.css') }}" rel="stylesheet" />
+    @yield('styles')
+
+    @laravelPWA
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="90" data-bs-smooth-scroll="true">
     <!-- Background Video-->
     <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
         <source src="{{ asset('mp4/bg.mp4') }}" type="video/mp4" />
@@ -31,12 +36,11 @@
         <div class="masthead-content text-white">
             <div class="col-md-12">
                 <span id="btnInicio" class="nav-link" style="display:none">
-                   <i class="fas fa-left-arrow"></i> Regresar al inicio  
+                    <i class="fas fa-left-arrow"></i> Regresar al inicio
                 </span>
             </div>
             <div class="container-fluid px-4 px-lg-0 text-center">
-                <img src="{{ asset('images/logo-sumy@2xwhite.png') }}" class="img fluid"
-                    style="width: 200px;">
+                <img src="{{ asset('images/logo-sumy@2xwhite.png') }}" class="img fluid" style="width: 200px;">
                 <div id="paso1">
                     <h3 class="fst-italic lh-1 mb-4 mt-3">¿Eres Transportador de Sumy?</h3>
                     <p class="mb-5">Si formas parte de los transportadores de Sumy, ingresa a la plataforma donde
@@ -44,8 +48,7 @@
                     </p>
                     <div class="row">
                         <div class="col text-center">
-                            <img src="{{ asset('images/venta-empresa.jpg') }}"
-                                class="img-fluid rounded-circle"><br>
+                            <img src="{{ asset('images/venta-empresa.jpg') }}" class="img-fluid rounded-circle"><br>
                             Ver ingresos diarios
                         </div>
                         <div class="col text-center">
@@ -71,7 +74,7 @@
                 <div id="paso2" class="text-center mt-5" style="display:none">
                     <h3>Inicio de Sesión</h3>
                     <p>Por favor, ingresa tus datos de acceso al sistema de Sumy</p>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="/login">
                         @csrf
                         <div class="row">
                             <div class="form-group">
@@ -98,10 +101,10 @@
             <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
-@endsection
 
+    <script src="{{ asset('js/jquery-3.7.0.min.js') }}"></script>
+    <script src="{{ asset('pwa/js/scripts.js') }}"></script>
 
-@section('scripts')
     <script>
         $(document).ready(function() {
             $("#paso2").hide();
@@ -112,11 +115,13 @@
                 $("#btnInicio").show();
             })
 
-            $("#btnInicio").click(function(){
+            $("#btnInicio").click(function() {
                 $("#paso1").fadeIn();
                 $("#btnInicio").hide();
                 $("#paso2").hide();
             })
         })
     </script>
-@endsection
+</body>
+
+</html>
