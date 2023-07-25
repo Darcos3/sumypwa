@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'Sumy Transportadores',
+    'name' => 'Sumy_Transportadores',
     'manifest' => [
-        'name' => env('APP_NAME', 'Sumy Transportadores'),
-        'short_name' => 'Sumy Transportadores',
+        'name' => 'APP_NAME', 'Sumy_Transportadores',
+        'short_name' => 'Sumy_Transportadores',
         'start_url' => '/',
         'background_color' => '#f1592a',
         'theme_color' => '#f1592a',
