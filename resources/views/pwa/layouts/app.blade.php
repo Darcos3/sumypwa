@@ -18,7 +18,9 @@
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <link href="{{ asset('pwa/css/styles.css') }}" rel="stylesheet" />
         @yield('styles')
+
         @laravelPWA
+
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="90" data-bs-smooth-scroll="true">
